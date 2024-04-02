@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="3SEMESTRENOITE"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-02 09:00:20 "/>
+        <attribute name="created" value="M1NFTUVTVFJFTk9JVEU7RVNONTEyLTEyNDI5ODU7MjAyNC0wNC0wMjsiMDg6NTU6MTAgIjszMDMy"/>
+        <attribute name="edited" value="M1NFTUVTVFJFTk9JVEU7RVNONTEyLTEyNDI5ODU7MjAyNC0wNC0wMjsiMDk6MDA6MjAgIjsxOzMxMzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="polegadas, milimetros" type="Real" array="False" size=""/>
+            <output expression="&quot;Escreva uma quantidade de chuva dada em polegadas para obter seu valor em milimetros&quot;" newline="True"/>
+            <input variable="polegadas"/>
+            <assign variable="milimetros" expression="polegadas * 25.4"/>
+            <output expression="&quot;O valor da polegada dada em milimetros &#233;...&quot;" newline="True"/>
+            <output expression="milimetros" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

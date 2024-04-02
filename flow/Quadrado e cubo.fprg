@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="3SEMESTRENOITE"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-02 09:05:01 "/>
+        <attribute name="created" value="M1NFTUVTVFJFTk9JVEU7RVNONTEyLTEyNDI5ODU7MjAyNC0wNC0wMjsiMDk6MDA6NDcgIjszMDMz"/>
+        <attribute name="edited" value="M1NFTUVTVFJFTk9JVEU7RVNONTEyLTEyNDI5ODU7MjAyNC0wNC0wMjsiMDk6MDU6MDEgIjsxOzMxMzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, quadrado, cubo" type="Real" array="False" size=""/>
+            <output expression="&quot;Escreva um numero para obter seu valor ao quadrado e ao cubo&quot;" newline="True"/>
+            <input variable="num1"/>
+            <assign variable="quadrado" expression="(num1)^2"/>
+            <assign variable="cubo" expression="(num1)^3"/>
+            <output expression="&quot;O valor ao quadrado deste numero &#233; igual a...&quot;" newline="True"/>
+            <output expression="quadrado" newline="True"/>
+            <output expression="&quot;O valor ao cubo deste numero &#233; igual a...&quot;" newline="True"/>
+            <output expression="cubo" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

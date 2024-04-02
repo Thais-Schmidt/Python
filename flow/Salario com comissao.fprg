@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="3SEMESTRENOITE"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-02 10:43:02 "/>
+        <attribute name="created" value="M1NFTUVTVFJFTk9JVEU7RVNONTEyLTEyNDI5ODU7MjAyNC0wNC0wMjsiMTA6MDc6MTggIjszMDMw"/>
+        <attribute name="edited" value="M1NFTUVTVFJFTk9JVEU7RVNONTEyLTEyNDI5ODU7MjAyNC0wNC0wMjsiMTA6NDM6MDIgIjsxOzMxMzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="salario, comissao, porcVenda, soma1, soma2, carrosVendidos, salarioComissao" type="Real" array="False" size=""/>
+            <declare name="nome" type="String" array="False" size=""/>
+            <assign variable="salario" expression="2000"/>
+            <assign variable="porcVenda" expression="0.10"/>
+            <output expression="&quot;Qual seu nome?&quot;" newline="True"/>
+            <input variable="nome"/>
+            <output expression="&quot;Quantos carros voce vendeu?&quot;" newline="True"/>
+            <input variable="carrosVendidos"/>
+            <assign variable="comissao" expression="500 * carrosVendidos"/>
+            <assign variable="salarioComissao" expression="salario + comissao"/>
+            <assign variable="soma1" expression="salarioComissao * porcVenda"/>
+            <assign variable="soma2" expression="salarioComissao + soma1"/>
+            <output expression="&quot;Ol&#225; &quot;" newline="False"/>
+            <output expression="nome" newline="False"/>
+            <output expression="&quot;. Seu sal&#225;rio &#233; o valor total de: &quot;" newline="False"/>
+            <output expression="soma2" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

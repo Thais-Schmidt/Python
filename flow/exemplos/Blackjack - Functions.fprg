@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="1.0">
+    <attributes>
+        <attribute name="name" value="Blackjack"/>
+        <attribute name="authors" value="Devin Cook"/>
+        <attribute name="about" value="This is a simplified version of Blackjack that demonstrates a number of features including variables, functions, loops, etc..."/>
+        <attribute name="saved" value="8/11/2014 3:02:07 PM"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare variables="cash" type="Integer"/>
+            <declare variables="bet" type="Integer"/>
+            <declare variables="playerCards" type="Integer"/>
+            <declare variables="dealerCards" type="Integer"/>
+            <assign variable="cash" expression="100"/>
+            <call expression="introduction"/>
+            <while expression="cash &gt; 0">
+                <output expression="&quot;You now have $&quot; &amp; cash &amp; &quot;. Enter your bet.&quot;"/>
+                <assign variable="bet" expression="getBet(cash)"/>
+                <assign variable="playerCards" expression="GetCard() + GetCard()"/>
+                <assign variable="dealerCards" expression="GetCard()"/>
+                <output expression="&quot;Dealer gives you two cards...&quot;"/>
+                <output expression="&quot;You show: &quot; &amp; playerCards"/>
+                <output expression="&quot;Dealer shows: &quot; &amp; dealerCards"/>
+                <assign variable="playerCards" expression="playerTurn(playerCards)"/>
+                <if expression="playerCards &lt;= 21">
+                    <then>
+                        <assign variable="dealerCards" expression="dealerTurn(dealerCards, playerCards)"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="playerWon(playerCards, dealerCards)">
+                    <then>
+                        <output expression="&quot;YOU WIN!&quot;"/>
+                        <assign variable="cash" expression="cash + bet"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;YOU LOSE!&quot;"/>
+                        <assign variable="cash" expression="cash - bet"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;Game over!&quot;"/>
+        </body>
+    </function>
+    <function name="dealerTurn" type="Integer" variable="total">
+        <parameters>
+            <parameter name="start" type="Integer"/>
+            <parameter name="playerTotal" type="Integer"/>
+        </parameters>
+        <body>
+            <declare variables="total" type="Integer"/>
+            <declare variables="card" type="Integer"/>
+            <assign variable="total" expression="start"/>
+            <comment text="Dealer will continue to hit until their total is &gt; 21 OR they have beat the player"/>
+            <while expression="total &lt;= playerTotal &amp;&amp; total &lt;= 21">
+                <assign variable="card" expression="GetCard()"/>
+                <assign variable="total" expression="total + card"/>
+                <output expression="&quot;Dealer gets a &quot; &amp; card &amp; &quot;. He now shows &quot; &amp; total"/>
+            </while>
+        </body>
+    </function>
+    <function name="getBet" type="Integer" variable="bet">
+        <parameters>
+            <parameter name="max" type="Integer"/>
+        </parameters>
+        <body>
+            <declare variables="bet" type="Integer"/>
+            <input variable="bet"/>
+            <comment text="Ensure the player doesn't bet more than they have."/>
+            <while expression="bet &lt;=0 || bet &gt; max">
+                <output expression="&quot;Enter an amount between $1 and $&quot; &amp; max"/>
+                <input variable="bet"/>
+            </while>
+        </body>
+    </function>
+    <function name="getCard" type="Integer" variable="value">
+        <parameters/>
+        <body>
+            <declare variables="deal" type="Integer"/>
+            <declare variables="value" type="Integer"/>
+            <assign variable="deal" expression="random(13) + 1"/>
+            <if expression="deal &gt; 10">
+                <then>
+                    <comment text="If the card is above 10 (Jack, Queen, King), the function returns 10."/>
+                    <assign variable="value" expression="10"/>
+                </then>
+                <else>
+                    <assign variable="value" expression="deal"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="introduction" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Welcome to Flowgorithm Blackjack&quot;"/>
+            <output expression="&quot;The rules are quite simple - given this is simple demonstration program. Aces are always worth one. The dealer must hit until they have a higher hand (or they bust).&quot;"/>
+        </body>
+    </function>
+    <function name="playerTurn" type="Integer" variable="total">
+        <parameters>
+            <parameter name="start" type="Integer"/>
+        </parameters>
+        <body>
+            <declare variables="choice" type="String"/>
+            <declare variables="card" type="Integer"/>
+            <declare variables="total" type="Integer"/>
+            <assign variable="total" expression="start"/>
+            <comment text="Loop until the player selects &quot;s&quot; to stand or they bust."/>
+            <do expression="total &lt;= 21 &amp;&amp; choice != &quot;s&quot;">
+                <output expression="&quot;Hit or stand?  (h/s)&quot;"/>
+                <input variable="choice"/>
+                <if expression="choice == &quot;h&quot;">
+                    <then>
+                        <assign variable="card" expression="GetCard()"/>
+                        <output expression="&quot;You are dealed a &quot; &amp; card"/>
+                        <assign variable="total" expression="total + card"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="&quot;You show: &quot; &amp; total"/>
+            </do>
+        </body>
+    </function>
+    <function name="playerWon" type="Boolean" variable="won">
+        <parameters>
+            <parameter name="playerTotal" type="Integer"/>
+            <parameter name="dealerTotal" type="Integer"/>
+        </parameters>
+        <body>
+            <declare variables="won" type="Boolean"/>
+            <comment text="This logic can be simplied to a single Boolean expression. However, let's keep it readable."/>
+            <if expression="playerTotal &gt; dealerTotal">
+                <then>
+                    <if expression="playerTotal &lt;= 21">
+                        <then>
+                            <assign variable="won" expression="true"/>
+                        </then>
+                        <else>
+                            <assign variable="won" expression="false"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="dealerTotal &lt;= 21">
+                        <then>
+                            <assign variable="won" expression="false"/>
+                        </then>
+                        <else>
+                            <assign variable="won" expression="true"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

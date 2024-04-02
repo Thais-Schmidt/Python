@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="3SEMESTRENOITE"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-26 11:04:47 "/>
+        <attribute name="created" value="M1NFTUVTVFJFTk9JVEU7RVNONTEyLTEyNDI5ODU7MjAyNC0wMy0yNjsiMDg6MzA6MDQgIjszMDMz"/>
+        <attribute name="edited" value="M1NFTUVTVFJFTk9JVEU7RVNONTEyLTEyNDI5ODU7MjAyNC0wMy0yNjsiMTE6MDQ6NDcgIjsxOzMxNDM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Idade" type="Integer" array="False" size=""/>
+            <output expression="&quot;Quantos anos voce tem&quot;" newline="True"/>
+            <input variable="Idade"/>
+            <if expression="Idade &gt;= 16">
+                <then>
+                    <output expression="&quot;Voce ja pode votar!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Voce n&#227;o tem idade para votar&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

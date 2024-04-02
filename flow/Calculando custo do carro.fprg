@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="3SEMESTRENOITE"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-02 09:19:45 "/>
+        <attribute name="created" value="M1NFTUVTVFJFTk9JVEU7RVNONTEyLTEyNDI5ODU7MjAyNC0wNC0wMjsiMDk6MDY6MjEgIjszMDMx"/>
+        <attribute name="edited" value="M1NFTUVTVFJFTk9JVEU7RVNONTEyLTEyNDI5ODU7MjAyNC0wNC0wMjsiMDk6MTk6NDUgIjsxOzMxNDk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="custoFabrica, porcDistri, impostos, custoConsu" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite qual o custo de fabrica do carro novo&quot;" newline="True"/>
+            <input variable="custoFabrica"/>
+            <assign variable="porcDistri" expression="0.12"/>
+            <assign variable="impostos" expression="0.45"/>
+            <assign variable="custoConsu" expression="((porcDistri + impostos) * custoFabrica) + custoFabrica"/>
+            <output expression="&quot;O pre&#231;o final que ser&#225; cobrado do consumidor &#233; ...&quot;" newline="True"/>
+            <output expression="custoConsu" newline="False"/>
+        </body>
+    </function>
+</flowgorithm>

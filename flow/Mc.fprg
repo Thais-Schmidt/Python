@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="3SEMESTRENOITE"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-02 10:51:41 "/>
+        <attribute name="created" value="M1NFTUVTVFJFTk9JVEU7RVNONTEyLTEyNDI5ODU7MjAyNC0wNC0wMjsiMDk6MTk6NTUgIjszMDQy"/>
+        <attribute name="edited" value="M1NFTUVTVFJFTk9JVEU7RVNONTEyLTEyNDI5ODU7MjAyNC0wNC0wMjsiMTA6NTE6NDEgIjszOzMxMzU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="hamburguer, cheeseburguer, fritas, refrigerante, milkshake, num1, num2, num3, num4, num5, total" type="Real" array="False" size=""/>
+            <assign variable="hamburguer" expression="15"/>
+            <assign variable="cheeseburguer" expression="18"/>
+            <assign variable="fritas" expression="8.5"/>
+            <assign variable="refrigerante" expression="5.5"/>
+            <assign variable="milkshake" expression="12.9"/>
+            <output expression="&quot;Quantos hamburgueres?&quot;" newline="True"/>
+            <input variable="num1"/>
+            <output expression="&quot;Quantos cheeseburgueres?&quot;" newline="True"/>
+            <input variable="num2"/>
+            <output expression="&quot;Quantas fritas?&quot;" newline="True"/>
+            <input variable="num3"/>
+            <output expression="&quot;Quantos refris?&quot;" newline="True"/>
+            <input variable="num4"/>
+            <output expression="&quot;Quantos milkshakes?&quot;" newline="True"/>
+            <input variable="num5"/>
+            <assign variable="total" expression="(num1 * hamburguer) + (num2 * cheeseburguer) + (num3 * fritas) + (num4 * refrigerante) + (num5 * milkshake)"/>
+            <output expression="&quot;O valor total da sua conta &#233; ... &quot;" newline="True"/>
+            <output expression="total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

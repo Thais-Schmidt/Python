@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="3SEMESTRENOITE"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-02 08:54:42 "/>
+        <attribute name="created" value="M1NFTUVTVFJFTk9JVEU7RVNONTEyLTEyNDI5ODU7MjAyNC0wNC0wMjsiMDg6NDg6NDUgIjszMDQy"/>
+        <attribute name="edited" value="M1NFTUVTVFJFTk9JVEU7RVNONTEyLTEyNDI5ODU7MjAyNC0wNC0wMjsiMDg6NTQ6NDIgIjsxOzMxNDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="celsius, fafa" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite uma temperatura em &#186;C para obter seu valor em &#176;F&quot;" newline="True"/>
+            <input variable="celsius"/>
+            <assign variable="fafa" expression="(celsius * 9 /5 ) + 32"/>
+            <output expression="&quot;A temperatura convertida para Fahrenheit &#233;&quot;" newline="True"/>
+            <output expression="fafa" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
