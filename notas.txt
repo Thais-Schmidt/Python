@@ -1,0 +1,18 @@
+salvar algum arquivo do bloco de notas em algum canto como 
+
+nomedoarquivo.py
+
+abrir o terminal e digitar cd caminhodoarquivo
+
+depois digitar python nomedoarquivo.py 
+
+e dar enter
+
+ele vai devolver a resolução do codigo
+
+
+
+
+
+
+C:\Users\3SEMESTRENOITE\AppData\Local\Programs\Python\Python312
